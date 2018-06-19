@@ -1,0 +1,22 @@
+{
+  "name": "dblp-xml-spider",
+  "version": "1.0.0",
+  "description": "DBLP论文信息XML简易爬虫",
+  "main": "main.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "iconv-lite": "^0.4.23",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+	  "dblp",
+	  "xml",
+	  "spider"
+  ],
+  "author": "Jindai Kirin",
+  "license": "GPL-3.0"
+}
