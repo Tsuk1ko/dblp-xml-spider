@@ -2,7 +2,7 @@
  * @Author: JindaiKirin 
  * @Date: 2018-05-21 16:39:24 
  * @Last Modified by: JindaiKirin
- * @Last Modified time: 2018-06-19 15:36:32
+ * @Last Modified time: 2018-06-25 17:53:26
  */
 
 const fs = require('fs');
@@ -19,12 +19,12 @@ var cnt = 0;
  */
 async function spide(urls, filename = new Date().getTime()) {
 	for (i in urls) {
-		await GetReq.get(url[i]).then(async chtml => {
-			//取得文章超链接
+		await GetReq.get(urls[i]).then(async chtml => {
+			//期刊每期的超链接
 			var hrefs = Extractor.catalog(chtml);
-			//得到文章内容
-			for (i in hrefs) {
-				await GetReq.get(hrefs[i]).then(ahtml => {
+			//取得每一期所有文章xml的下载链接
+			for (j in hrefs) {
+				await GetReq.get(hrefs[j]).then(ahtml => {
 					var articles = Extractor.article(ahtml);
 					writeToFile(articles, filename);
 				});

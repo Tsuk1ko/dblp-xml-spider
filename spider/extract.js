@@ -2,13 +2,13 @@
  * @Author: JindaiKirin 
  * @Date: 2018-05-21 17:37:44 
  * @Last Modified by: JindaiKirin
- * @Last Modified time: 2018-06-19 14:42:05
+ * @Last Modified time: 2018-06-25 17:52:53
  */
 
 const cheerio = require('cheerio');
 
 /**
- * 提取目录中所有文章的超链接
+ * 提取期刊每一期的超链接
  * 
  * @param {string} html 目录html
  * @returns 超链接数组
@@ -27,7 +27,7 @@ function extractCatalog(html) {
 }
 
 /**
- * 提取公文通文章标题和正文
+ * 提取xml下载链接
  * 
  * @param {string} html 文章列表html
  * @returns 超链接数组
